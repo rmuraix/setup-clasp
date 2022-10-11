@@ -1,0 +1,43 @@
+name: Setup Clasp
+author: Ryota Murai
+description: Setup google/clasp
+inputs:
+  clasp-version:
+    description: 'Version of Clasp(Number)'
+    required: false
+  acsess-token:
+    description: 'access_token written in ~/clasprc.json'
+    required: true
+  id-token:
+    description: 'id_token written in ~/clasprc.json'
+    required: true
+  refresh-token: 
+    description: 'refresh_token written in ~/clasprc.json'
+    required: true
+  client-id:
+    description: 'clientId written in ~/clasprc.json'
+    required: true
+  client-secret:
+    description: 'clientSecret written in ~/clasprc.json'
+    required: true
+  script-id:
+    description: 'scriptId written in clasp.json'
+    required: true
+  root-dir:
+    description: 'Local directory in which clasp will store your project files'
+    required: false
+    default: './'
+runs:
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH/setup-clasp.sh
+      shell: Bash
+      env: 
+        INPUT-CLASP-VERSION: ${{ inputs.clasp-version }}
+        INPUT-ACCESS-TOKEN: ${{ inputs.acsess-token }}
+        INPUT-ID-TOKEN: ${{ inputs.id-token }}
+        INPUT-REFRESH-TOKEN: ${{inputs.refresh-token}}
+        INPUT-CLIENT-ID: ${{ inputs.client-id }}
+        INPUT-CLIRNT-SECRET: ${{ inputs.client-secret }}
+        INPUT-SCRIPT-ID: ${{ inputs.script-id }}
+        INPUT-ROOT-DIR: ${{ inputs.root-dir }}
