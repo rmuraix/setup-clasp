@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Install clasp 
-if [ -z ${inputs.clasp-version} ]; then
+if [ -z "${inputs.clasp-version}" ]; then
   npm install @google/clasp -g
 else
-  npm install @google/clasp@${inputs.clasp-version} -g
+  npm install @google/clasp@"${inputs.clasp-version}" -g
 fi
 
 # Create .clasprc.json
-CLASPRC = $(cat <<EOF
+CLASPRC = "$(cat <<EOF
     {
         "token": {
             "access_token": "${inputs.access-token}",
@@ -25,17 +25,17 @@ CLASPRC = $(cat <<EOF
         "isLocalCreds": false
     }
 EOF
-)
+)"
 
-echo $CLASPRC > ~/.clasprc.json
+echo "$CLASPRC" > ~/.clasprc.json
 
 # Create .clasp.json
-CLASPJSON = $(cat <<EOF
+CLASPJSON = "$(cat <<EOF
     {
         "scriptId": "${inputs.script-id}",
         "rootDir": "${inputs.root-dir}"
     }
 EOF
-)
+)"
 
-echo $CLASPJSON > ${{Github.workspace}}/.clasp.json
+echo $CLASPJSON > "${{ github.workspace }}/.clasp.json"
