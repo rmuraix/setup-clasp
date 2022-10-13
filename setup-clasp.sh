@@ -8,7 +8,7 @@ else
 fi
 
 # Create .clasprc.json
-CLASPRC = "$(cat <<EOF
+CLASPRC="$(cat <<EOF
     {
         "token": {
             "access_token": "${inputs.access-token}",
@@ -30,7 +30,7 @@ EOF
 echo "$CLASPRC" > ~/.clasprc.json
 
 # Create .clasp.json
-CLASPJSON = "$(cat <<EOF
+CLASPJSON="$(cat <<EOF
     {
         "scriptId": "${inputs.script-id}",
         "rootDir": "${inputs.root-dir}"
@@ -38,4 +38,4 @@ CLASPJSON = "$(cat <<EOF
 EOF
 )"
 
-echo $CLASPJSON > "${{ github.workspace }}/.clasp.json"
+echo "$CLASPJSON" > /.clasp.json
