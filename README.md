@@ -1,6 +1,8 @@
 # Setup Clasp
+
 [![GitHub license](https://img.shields.io/github/license/rmuraix/setup-clasp)](./LICENSE)  
-Setup [google/clasp](https://github.com/google/clasp) in GitHub Actions.  
+Setup [google/clasp](https://github.com/google/clasp) in GitHub Actions.
+
 ## Usage
 
 ```yaml
@@ -22,8 +24,10 @@ Setup [google/clasp](https://github.com/google/clasp) in GitHub Actions.
 - name: Push
   run: |
     clasp push
-```  
+```
+
 ## Inputs
+
 - `clasp-version` (Optional)
   - Version of Clasp. Default is latest version
 - `access-token` (Required)
@@ -40,5 +44,7 @@ Setup [google/clasp](https://github.com/google/clasp) in GitHub Actions.
   - `scriptId` written in `.clasp.json`
 - `root-dir` (Optional)
   - Local directory in which clasp will store your project files. Default is project root.
+
 ## Contributing
-Please read [Contribution Guide](./.github/CONTRIBUTING.md).  
+
+Please read [Contribution Guide](./.github/CONTRIBUTING.md).
