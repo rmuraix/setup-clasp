@@ -1,10 +1,11 @@
 # Setup Clasp
 
 [![GitHub license](https://img.shields.io/github/license/rmuraix/setup-clasp)](./LICENSE)
-[![DeepSource](https://deepsource.io/gh/rmuraix/setup-clasp.svg/?label=active+issues&token=i29VnWyNCDuJvYzBQcU5N8vx)](https://deepsource.io/gh/rmuraix/setup-clasp/?ref=repository-badge)  
+[![DeepSource](https://deepsource.io/gh/rmuraix/setup-clasp.svg/?label=active+issues&token=i29VnWyNCDuJvYzBQcU5N8vx)](https://deepsource.io/gh/rmuraix/setup-clasp/?ref=repository-badge)
 
-Setup [google/clasp](https://github.com/google/clasp) on GitHub Actions.  
-- Install Clasp  
+Setup [google/clasp](https://github.com/google/clasp) on GitHub Actions.
+
+- Install Clasp
 - Create `~/.clasprc.json` and `.clasp.json`
 
 ## Example
