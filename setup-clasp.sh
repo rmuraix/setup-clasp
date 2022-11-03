@@ -39,4 +39,4 @@ CLASPJSON="$(cat <<EOF
 EOF
 )"
 
-echo "$CLASPJSON" > /.clasp.json
+echo "$CLASPJSON" > .clasp.json
