@@ -1,9 +1,13 @@
 # Setup Clasp
 
-[![GitHub license](https://img.shields.io/github/license/rmuraix/setup-clasp)](./LICENSE)  
-Setup [google/clasp](https://github.com/google/clasp) in GitHub Actions.
+[![GitHub license](https://img.shields.io/github/license/rmuraix/setup-clasp)](./LICENSE)
+[![DeepSource](https://deepsource.io/gh/rmuraix/setup-clasp.svg/?label=active+issues&token=i29VnWyNCDuJvYzBQcU5N8vx)](https://deepsource.io/gh/rmuraix/setup-clasp/?ref=repository-badge)  
 
-## Usage
+Setup [google/clasp](https://github.com/google/clasp) on GitHub Actions.  
+- Install Clasp  
+- Create `~/.clasprc.json` and `.clasp.json`
+
+## Example
 
 ```yaml
 - uses: actions/checkout@v3
@@ -21,9 +25,9 @@ Setup [google/clasp](https://github.com/google/clasp) in GitHub Actions.
     client-secret: ${{ secrets.CLIENT_SECRET }}
     script-id: ${{ secrets.SCRIPT_ID }}
     root-dir: "./src"
-- name: Push
+- name: Push to Apps Script
   run: |
-    clasp push
+    clasp push -f
 ```
 
 ## Inputs
