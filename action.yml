@@ -33,6 +33,7 @@ runs:
     - run: $GITHUB_ACTION_PATH/setup-clasp.sh
       shell: Bash
       env: 
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
         INPUT-CLASP-VERSION: ${{ inputs.clasp-version }}
         INPUT-ACCESS-TOKEN: ${{ inputs.access-token }}
         INPUT-ID-TOKEN: ${{ inputs.id-token }}
