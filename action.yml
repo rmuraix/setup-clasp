@@ -5,7 +5,7 @@ inputs:
   clasp-version:
     description: 'Version of Clasp(Number)'
     required: false
-  acsess-token:
+  access-token:
     description: 'access_token written in ~/clasprc.json'
     required: true
   id-token:
@@ -30,10 +30,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: $GITHUB_ACTION_PATH/setup-clasp.sh
+    - run: setup-clasp.sh
       shell: Bash
       env: 
-        GITHUB_ACTION_PATH: ${{ github.action_path }}
         INPUT-CLASP-VERSION: ${{ inputs.clasp-version }}
         INPUT-ACCESS-TOKEN: ${{ inputs.access-token }}
         INPUT-ID-TOKEN: ${{ inputs.id-token }}
