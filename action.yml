@@ -34,7 +34,7 @@ runs:
       shell: Bash
       env: 
         INPUT-CLASP-VERSION: ${{ inputs.clasp-version }}
-        INPUT-ACCESS-TOKEN: ${{ inputs.acsess-token }}
+        INPUT-ACCESS-TOKEN: ${{ inputs.access-token }}
         INPUT-ID-TOKEN: ${{ inputs.id-token }}
         INPUT-REFRESH-TOKEN: ${{inputs.refresh-token}}
         INPUT-CLIENT-ID: ${{ inputs.client-id }}
